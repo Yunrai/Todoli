@@ -1,8 +1,6 @@
 import { useState } from "react";
 import TaskRow from "./taskRow";
 
-
-
 const tasksArr = [
         {
             id:1,
@@ -38,15 +36,7 @@ const TaskList = () =>{
 
                 ]);
     };
-    
-   /*
-                        id:prompt("Task number?"),
-                        name: prompt("Name of the task"),
-                        level: prompt("Diffculty level?"),
-                        deadline: prompt("Due to?"),
-                        repeating: prompt("Repeating?"),
    
-  */
     return (
         <>
         <table className="table table-hover table-responsive ">
@@ -68,7 +58,6 @@ const TaskList = () =>{
         </table>
 
         <button className="btn btn-dark" onClick={addTask}>Add Task</button>
-       
      
         </>
 

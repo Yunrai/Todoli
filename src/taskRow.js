@@ -1,6 +1,10 @@
 const TaskRow = ({task}) => {
-        return (
-          <tr>
+        const finish = () => {
+            alert("Task Done!");
+        };  
+  
+  return (
+          <tr className="rows" onClick={finish} >
                 <td>{task.id}</td>
                 <td>{task.name}</td>
                 <td>{task.level}</td>

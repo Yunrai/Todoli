@@ -19,6 +19,17 @@
   margin: 1vh;
 }
 
+.rows{
+  cursor: pointer;
+}
+
+
+.modal-body{
+  align-items: center;
+  text-align: left;
+  padding: 3vh;
+  
+}
 
 
 
