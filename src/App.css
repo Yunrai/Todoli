@@ -12,6 +12,7 @@
 
 .logo {
   width: 20vh; 
+  cursor: pointer;
 }
 
 .btn{

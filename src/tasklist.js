@@ -1,12 +1,14 @@
 import { useState } from "react";
 import TaskRow from "./taskRow";
 
+
+
 const tasksArr = [
         {
             id:1,
             name: "Read a book",
             level: "Easy",
-            deadline: "Today",
+            deadline: "Weekly",
             repeating: "Yes"
         },
         {
@@ -33,6 +35,7 @@ const TaskList = () =>{
                         deadline: "Today",
                         repeating: "Yes",
                     },    
+                  
 
                 ]);
     };
