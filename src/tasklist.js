@@ -3,7 +3,7 @@ import TaskRow from "./taskRow";
 
 
 
-const tasksArr = [
+export const tasksArr = [
         {
             id:1,
             name: "Read a book",
@@ -25,8 +25,12 @@ const tasksArr = [
 
 const TaskList = () =>{
     const [tasks, setTasks] = useState(tasksArr);
+
+
     const addTask = () => {
                 setTasks([
+
+               
                         ...tasks,
                     {
                         id:3,
@@ -34,12 +38,14 @@ const TaskList = () =>{
                         level: "Medium",
                         deadline: "Today",
                         repeating: "Yes",
-                    },    
+                    },   
+               
                   
-
-                ]);
+                ])
     };
-   
+
+    
+    
     return (
         <>
         <table className="table table-hover table-responsive ">
@@ -61,7 +67,8 @@ const TaskList = () =>{
         </table>
 
         <button className="btn btn-dark" onClick={addTask}>Add Task</button>
-     
+    
+      
         </>
 
     )

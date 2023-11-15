@@ -1,38 +1,66 @@
 import { useState } from "react";
+import { tasksArr } from "./tasklist";
+
 
 const Modal = () => {
-    const [task, setTask] = useState({
+    const [todo, setTask] = useState({
         id:"", 
         name:"", 
         level:"",
         deadline: "",
         repeating:""
     });
-    
+
+   
+
     const submit = (e) => {
         e.preventDefault();
+      
     };
-    
+
+    const handleData = (e) => {
+        e.preventDefault();
+
+        const newTask = {
+            id: todo.id,
+            name: todo.name,
+            level: todo.level,
+            deadline: todo.deadline,
+            reapting: todo.repeating,
+
+        };
+        const newTasks = [...tasksArr, newTask];
+        setTask(newTasks);
+
+    };
     const showInput = () =>{
-        console.log(task);
+        console.log(todo);
     }
 
+    const taskStr = JSON.stringify(todo);
+
+
     return (
-         
-         <form onSubmit={submit}>
-              &nbsp;<label>Number</label> &nbsp;
-              <input type="number" value={task.id} onChange={(e) => setTask({...task, id: e.target.value})} placeholder="Task Nr." />
-              &nbsp; <label>Name</label> &nbsp;
-              <input type="text" value={task.name} onChange={(e) => setTask({...task, name: e.target.value})}  />
-              &nbsp; <label>Level</label> &nbsp;
-              <input type="text" value={task.level} onChange={(e) => setTask({...task, level: e.target.value})}  />
-              &nbsp; <label>Due to?</label> &nbsp;
-              <input type="text" value={task.deadline} onChange={(e) => setTask({...task, deadline: e.target.value})}  />
-              &nbsp; <label>Repeating?</label> &nbsp;
-              <input type="text" value={task.repeating} onChange={(e) => setTask({...task, repeating: e.target.value})}  />
-              <button type="submit" className="btn btn-dark" onClick={showInput}>Add New Task</button>
-        </form> 
        
+         <form onSubmit={handleData}>
+              &nbsp;<label>Number</label> &nbsp;
+              <input type="number" value={todo.id} onChange={(e) => setTask({...todo, id: e.target.value})} placeholder="Task Nr." />
+              &nbsp; <label>Name</label> &nbsp;
+              <input type="text" value={todo.name} onChange={(e) => setTask({...todo, name: e.target.value})}  />
+              &nbsp; <label>Level</label> &nbsp;
+              <input type="text" value={todo.level} onChange={(e) => setTask({...todo, level: e.target.value})}  />
+              &nbsp; <label>Due to?</label> &nbsp;
+              <input type="text" value={todo.deadline} onChange={(e) => setTask({...todo, deadline: e.target.value})}  />
+              &nbsp; <label>Repeating?</label> &nbsp;
+              <input type="text" value={todo.repeating} onChange={(e) => setTask({...todo, repeating: e.target.value})}  />
+              <button type="submit" className="btn btn-dark">Add New Task</button>
+        <hr />
+        <h2>
+            <i>{taskStr}</i>
+            
+        </h2>
+        </form> 
+      
        );
 
 };
