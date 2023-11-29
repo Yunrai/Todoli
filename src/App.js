@@ -4,6 +4,7 @@ import TaskList from './tasklist';
 import PopUp from './popup';
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import Modal from './modal';
+import Footer from './footer';
 
 
 function App() {
@@ -26,9 +27,8 @@ function App() {
           <TaskList />
           <PopUp />
 
-
-          <Modal />
-
+        <Modal />
+        <Footer />
           <Routes>
             <Route 
             path="/home" 

@@ -1,0 +1,46 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "name": "Read a book",
+      "level": "Easy",
+      "deadline": "Weekly",
+      "repeating": "Yes"
+    },
+    {
+      "id": "2",
+      "name": "Pay Rent",
+      "level": "Medium",
+      "deadline": "End of the Week",
+      "repeating": "No"
+    },
+    {
+      "id": "3",
+      "name": "Go to the Gym",
+      "level": "Easy",
+      "deadline": "Weekly",
+      "repeating": "Yes"
+    },
+    {
+      "id": "4",
+      "name": "Play a Game",
+      "level": "Easy",
+      "deadline": "Everyday",
+      "repeating": "Yes"
+    },
+    {
+      "id": "5",
+      "name": "Pay Bills",
+      "level": "Easy",
+      "deadline": "This Week",
+      "repeating": "No"
+    },
+    {
+      "id": "6",
+      "name": "Buy Vitamins",
+      "level": "Easy",
+      "deadline": "This Week",
+      "repeating": "No"
+    }
+  ]
+}

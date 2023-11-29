@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { tasksArr } from "./tasklist";
 
 
 const Modal = () => {
+
     const [todo, setTask] = useState({
         id:"", 
         name:"", 
@@ -11,35 +11,44 @@ const Modal = () => {
         repeating:""
     });
 
-   
 
-    const submit = (e) => {
+    const handleData = (e) => { 
         e.preventDefault();
       
-    };
-
-    const handleData = (e) => {
-        e.preventDefault();
-
-        const newTask = {
+        const newTask =  {
             id: todo.id,
             name: todo.name,
             level: todo.level,
             deadline: todo.deadline,
-            reapting: todo.repeating,
+            repeating: todo.repeating,
 
         };
-        const newTasks = [...tasksArr, newTask];
-        setTask(newTasks);
+    
+        
+
+        setTask((newTask)=> {
+                return newTask});
+        console.log(newTask);
+
+      
+                
+        fetch('http://localhost:8000/tasks/', 
+        {
+            method: "POST",
+            headers: { 'Content-Type': "application/json" },
+            body: JSON.stringify(newTask)
+        }).then(() => console.log("New Task Added") )
+
+        refreshPage();
 
     };
-    const showInput = () =>{
-        console.log(todo);
-    }
+ 
 
-    const taskStr = JSON.stringify(todo);
+    function refreshPage(){
+        window.location.reload();
+    } 
 
-
+         
     return (
        
          <form onSubmit={handleData}>
@@ -55,10 +64,7 @@ const Modal = () => {
               <input type="text" value={todo.repeating} onChange={(e) => setTask({...todo, repeating: e.target.value})}  />
               <button type="submit" className="btn btn-dark">Add New Task</button>
         <hr />
-        <h2>
-            <i>{taskStr}</i>
-            
-        </h2>
+        
         </form> 
       
        );
@@ -66,3 +72,6 @@ const Modal = () => {
 };
 
 export default Modal;
+
+
+
