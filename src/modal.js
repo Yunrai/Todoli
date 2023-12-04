@@ -42,7 +42,7 @@ const Modal = () => {
         refreshPage();
 
     };
- 
+  
 
     function refreshPage(){
         window.location.reload();
@@ -53,15 +53,15 @@ const Modal = () => {
        
          <form onSubmit={handleData}>
               &nbsp;<label>Number</label> &nbsp;
-              <input type="number" value={todo.id} onChange={(e) => setTask({...todo, id: e.target.value})} placeholder="Task Nr." />
+              <input type="number" required value={todo.id} onChange={(e) => setTask({...todo, id: e.target.value})} placeholder="Task Nr." />
               &nbsp; <label>Name</label> &nbsp;
-              <input type="text" value={todo.name} onChange={(e) => setTask({...todo, name: e.target.value})}  />
+              <input type="text" required value={todo.name} onChange={(e) => setTask({...todo, name: e.target.value})}  />
               &nbsp; <label>Level</label> &nbsp;
-              <input type="text" value={todo.level} onChange={(e) => setTask({...todo, level: e.target.value})}  />
+              <input type="text" required value={todo.level} onChange={(e) => setTask({...todo, level: e.target.value})}  />
               &nbsp; <label>Due to?</label> &nbsp;
-              <input type="text" value={todo.deadline} onChange={(e) => setTask({...todo, deadline: e.target.value})}  />
+              <input type="text" required value={todo.deadline} onChange={(e) => setTask({...todo, deadline: e.target.value})}  />
               &nbsp; <label>Repeating?</label> &nbsp;
-              <input type="text" value={todo.repeating} onChange={(e) => setTask({...todo, repeating: e.target.value})}  />
+              <input type="text" required  value={todo.repeating} onChange={(e) => setTask({...todo, repeating: e.target.value})}  />
               <button type="submit" className="btn btn-dark">Add New Task</button>
         <hr />
         

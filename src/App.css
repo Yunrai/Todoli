@@ -22,11 +22,6 @@
   margin: 1vh;
 }
 
-.rows{
-  cursor: pointer;
-}
-
-
 .modal-body{
   align-items: center;
   text-align: left;
@@ -40,6 +35,14 @@
 
 }
 
+.delbtn{
+  border: none;
+  background-color: black;
+  color:white;
+  border-radius: 5px;
+  margin-right:5px;
+
+}
 
 
 

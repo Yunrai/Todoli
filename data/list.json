@@ -41,6 +41,13 @@
       "level": "Easy",
       "deadline": "This Week",
       "repeating": "No"
+    },
+    {
+      "id": "7",
+      "name": "Toto e smecher",
+      "level": "Easy",
+      "deadline": "Today",
+      "repeating": "Yes"
     }
   ]
 }

@@ -1,3 +1,5 @@
+import Modal from "./modal";
+
 const PopUp = () => {
         return (
 
@@ -17,27 +19,7 @@ const PopUp = () => {
                         </button>
                     </div>
                 <div className="modal-body">
-                            <form> 
-                                <label for="id">Task Number</label> &nbsp;
-                                <input type="number" id="id" ></input>
-                                <br /><br />
-                                <label for="name">Task Name</label> &nbsp;
-                                <input type="text" id="name"></input>
-                                <br /><br />
-                                <label for="level">Difficulty Level</label> &nbsp;
-                                <input type="text" id="level"></input>
-                                <br /> <br /> 
-                                <label for="deadline">Due to?</label> &nbsp;
-                                <input type="text" id="deadline"></input>
-                                <br /> <br />
-                                <label for="repeating">Repeating?</label> &nbsp;
-                                <label for="repeating">Yes</label> &nbsp;
-                                <input type="radio" id="repeating" value="Yes"></input> &nbsp;&nbsp;
-                                
-                                <label for="repeating">No</label> &nbsp;
-                                <input type="radio" id="repeating" value="No"></input> 
-
-                            </form>
+                           <Modal />
                 </div>
 
                 <div className="modal-footer">
