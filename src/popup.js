@@ -12,7 +12,7 @@ const PopUp = () => {
                 <div className="modal-content">
                     <div className="modal-header">
                         <h5 className="modal-title" id="popupTitle">
-                                Add your new Task here
+                                Add New Task Here
                         </h5>
                         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -23,7 +23,7 @@ const PopUp = () => {
                 </div>
 
                 <div className="modal-footer">
-                    <button type="button" className="btn btn-dark" data-bs-dismiss="modal" >Add Task</button>
+                  <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
                 </div>
 
                 </div>

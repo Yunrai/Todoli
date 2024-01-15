@@ -3,7 +3,6 @@ import './App.css';
 import TaskList from './tasklist';
 import PopUp from './popup';
 import {Routes, Route, useNavigate} from 'react-router-dom';
-import Modal from './modal';
 import Footer from './footer';
 
 
@@ -27,7 +26,7 @@ function App() {
           <TaskList />
           <PopUp />
 
-        <Modal />
+  
         <Footer />
           <Routes>
             <Route 

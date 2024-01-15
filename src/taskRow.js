@@ -1,6 +1,6 @@
-import { deleteTask } from "./tasklist";
 
-const TaskRow = ({task}) => {
+
+const TaskRow = ({task, handleEditClick, handleDeleteClick}) => {
       //   const finish = () => {
       //       alert("Task Done!");
       //   };  
@@ -15,8 +15,8 @@ const TaskRow = ({task}) => {
                 <td>{task.deadline}</td>
                 <td>{task.repeating}</td>
                 <td className="d-flex justify-content-center">
-                  <button className="delbtn">Edit</button>
-                  <button className="delbtn" onClick={deleteTask}>Delete</button>
+                  <button className="delbtn" onClick={(event)=> handleEditClick(event, task)}>Edit</button>
+                  <button className="delbtn" onClick={()=> handleDeleteClick(task.id)}>Delete</button>
                 </td>
           </tr>          
 
