@@ -4,71 +4,22 @@
       "id": "1",
       "name": "Read a book",
       "level": "Easy",
-      "deadline": "Weekly",
+      "deadline": "Every Day",
       "repeating": "Yes"
     },
     {
       "id": "2",
-      "name": "Pay Rent",
-      "level": "Medium",
-      "deadline": "End of the Week",
-      "repeating": "No"
-    },
-    {
-      "id": "3",
-      "name": "Go to the Gym",
+      "name": "Water the Plants",
       "level": "Easy",
       "deadline": "Weekly",
       "repeating": "Yes"
     },
     {
-      "id": "4",
-      "name": "Play a Game",
-      "level": "Easy",
-      "deadline": "Everyday",
+      "id": "3",
+      "name": "Programming",
+      "level": "Medium",
+      "deadline": "Daily",
       "repeating": "Yes"
-    },
-    {
-      "id": "5",
-      "name": "Pay Bills",
-      "level": "Easy",
-      "deadline": "This Week",
-      "repeating": "No"
-    },
-    {
-      "id": "6",
-      "name": "Buy Vitamins",
-      "level": "Easy",
-      "deadline": "This Week",
-      "repeating": "No"
-    },
-    {
-      "id": "7",
-      "name": "Toto e smecher",
-      "level": "Easy",
-      "deadline": "Today",
-      "repeating": "Yes"
-    },
-    {
-      "id": "8",
-      "name": "Buy a Present",
-      "level": "Hard",
-      "deadline": "Christmas",
-      "repeating": "No"
-    },
-    {
-      "id": "9",
-      "name": "Hehe",
-      "level": "Easy",
-      "deadline": "Always",
-      "repeating": "Yes"
-    },
-    {
-      "id": "10",
-      "name": "hehe2",
-      "level": "easy",
-      "deadline": "always",
-      "repeating": "yes"
     }
   ]
 }

@@ -13,7 +13,14 @@ import EditTask from "./editdel";
         })
     }, [])
    
-    const [editData, setData] = useState([]);
+    const [editData, setData] = useState({
+          id: "",
+          name: "",
+          level: "",
+          deadline: "",
+          repeating: "",
+ });
+
     useEffect(()=> {
       fetch('http://localhost:8000/tasks/')
      .then(res => res.json())
@@ -38,20 +45,26 @@ import EditTask from "./editdel";
       }
       setData(formValues);
     }
-    
+
+  
     const handleEditData = (event) => {
       event.preventDefault();
-      
+
+      const fieldName = event.target.getAttribute("name");
+      const fieldValue = event.target.value;
+
       const newData = { ...tasks};
-      newData[editData] = tasks;
+
+      newData[fieldName] = fieldValue;
+
       setData(newData);
     }
      
    const handleEditSubmit = (event) => {
       event.preventDefault();
-
+     
       const editedTask = {
-        id: editTaskId,
+        id: editData.id,
         name: editData.name,
         level: editData.level,
         deadline: editData.deadline,
@@ -60,27 +73,43 @@ import EditTask from "./editdel";
 
       const newTasks = [...tasks];
 
-      const index = tasks.findIndex((task) => task.id === editTaskId);
+      const index = tasks.findIndex((task) => task.id === editData.id);
 
       newTasks[index] = editedTask;
 
       setTasks(newTasks);
       setTaskId(null);
+   
+      fetch(`http://localhost:8000/tasks/${index}`, {
+        method: 'PUT',
+      })
+      .then(res => {
+        return res.json()
+      })
+     
+   
    }
 
-   const handleCancelClick = () => {
-      setTaskId(null);
-   }
+    const handleCancelClick = () => {
+        setTaskId(null);
+    }
    
     const handleDeleteClick = (taskid) => {
-        const newTasks= [...tasks];
+      const newTasks= [...tasks];
 
-        const index = tasks.findIndex((task)=>task.id === taskid);
-        newTasks.splice(index, 1);
+      const index = tasks.findIndex((task)=>task.id === taskid);
+      newTasks.splice(index, 1);
+      
+      setTasks(newTasks)
 
-        setTasks(newTasks);
+      fetch('http://localhost:8000/tasks/' + taskid, {
+        method: 'DELETE',
+      })
+      .then(res => {
+        return res.json()
+      }) 
    }
-
+  
     
     return ( 
         <>
