@@ -63,10 +63,8 @@ const Modal = () => {
               <input type="text" required value={todo.deadline} onChange={(e) => setTask({...todo, deadline: e.target.value})}  />  <br />
               &nbsp; <label>Repeating?</label> &nbsp; <br />
               <input type="text" required  value={todo.repeating} onChange={(e) => setTask({...todo, repeating: e.target.value})}  />  <br />
-              <br />
-              <button type="submit" className="btn btn-dark">Add New Task</button>
-        <hr />
-        
+            
+           <button type="submit" className="btn btn-dark">Add New Task</button>
         </form> 
       
        );

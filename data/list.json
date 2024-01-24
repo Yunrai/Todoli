@@ -4,22 +4,36 @@
       "id": "1",
       "name": "Read a book",
       "level": "Easy",
-      "deadline": "Every Day",
+      "deadline": "Daily",
       "repeating": "Yes"
     },
     {
       "id": "2",
-      "name": "Water the Plants",
+      "name": "Pay Taxes",
       "level": "Easy",
-      "deadline": "Weekly",
+      "deadline": "This Month",
       "repeating": "Yes"
     },
     {
       "id": "3",
-      "name": "Programming",
+      "name": "Water the Plants",
+      "level": "Easy",
+      "deadline": "Tomorrow",
+      "repeating": "Weekly"
+    },
+    {
+      "id": "4",
+      "name": "Go to the Gym",
       "level": "Medium",
-      "deadline": "Daily",
-      "repeating": "Yes"
+      "deadline": "Once 2 days",
+      "repeating": "Weekly"
+    },
+    {
+      "id": "5",
+      "name": "Buy a pullover",
+      "level": "Easy",
+      "deadline": "This Week",
+      "repeating": "No"
     }
   ]
 }

@@ -22,6 +22,7 @@
   margin: 1vh;
 }
 
+
 .modal-body{
   text-align: left;
   padding: 3vh;
@@ -37,7 +38,6 @@
 .footer{
   position: absolute;
   bottom:0;
-
 }
 
 .delbtn{
@@ -46,9 +46,10 @@
   color:white;
   border-radius: 5px;
   margin-right:5px;
-
 }
-
+.delbtn:hover{
+  background-color: rgb(53, 53, 53);
+}
 
 
 

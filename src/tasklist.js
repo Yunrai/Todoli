@@ -109,7 +109,25 @@ import EditTask from "./editdel";
         return res.json()
       }) 
    }
-  
+   
+   const handleChecked = (taskid) =>{ 
+    const newTasks= [...tasks];
+
+    const index = tasks.findIndex((task)=>task.id === taskid);
+    newTasks.splice(index, 1);
+    
+    setTasks(newTasks)
+    
+
+    fetch('http://localhost:8000/tasks/' + taskid, {
+      method: 'DELETE',
+    })
+    .then(res => {
+      return res.json()
+    }).then(alert("Task Completed"))
+   
+ }
+
     
     return ( 
         <>
@@ -122,6 +140,7 @@ import EditTask from "./editdel";
                 <th>Difficulty</th>
                 <th>Deadline</th>
                 <th>Repeating?</th>
+                <th>Checked</th>
                 <th>Action</th>
               
             </tr>
@@ -132,7 +151,7 @@ import EditTask from "./editdel";
            <Fragment>
                       {editTaskId === t.id ? (<EditTask editData={editData} handleEditData={handleEditData} handleCancelClick={handleCancelClick} /> ) : 
                     
-                   ( <TaskRow key={t.id} task={t} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick}/> )}
+                   ( <TaskRow key={t.id} task={t} handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} handleChecked={handleChecked}/> )}
                   
             </Fragment> ) 
            }
